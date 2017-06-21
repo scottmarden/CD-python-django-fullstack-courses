@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Course Catalog</title>
+	</head>
+	<body>
+		<h1>Catalog Online!</h1>
+		<div id="wrapper">
+			<div id="add_course">
+				<h2>Add a new course</h2>
+				<form action="/add_course" method="post">
+					Name: <input type="text" name="name" />
+					Description: <textarea></textarea>
+					<input type="submit" value="Add" />
+				</form>
+			</div>
+			<div id="catalog">
+				<h2>Courses</h2>
+				<table>
+					<tr>
+						<th>Course Name</th>
+						<th>Description</th>
+						<th>Date Added</th>
+						<th>Actions</th>
+					</tr>
+				</table>
+			</div>
+
+		</div>
+	</body>
+</html>
