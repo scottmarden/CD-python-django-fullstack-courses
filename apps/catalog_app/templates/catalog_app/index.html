@@ -10,8 +10,9 @@
 			<div id="add_course">
 				<h2>Add a new course</h2>
 				<form action="/add_course" method="post">
+					{% csrf_token %}
 					Name: <input type="text" name="name" />
-					Description: <textarea></textarea>
+					Description: <textarea name="description"></textarea>
 					<input type="submit" value="Add" />
 				</form>
 			</div>
@@ -24,6 +25,13 @@
 						<th>Date Added</th>
 						<th>Actions</th>
 					</tr>
+					{% for course in courses %}
+						<tr>
+							<td>{{ course.name }}</td>
+							<td>{{ course.description.description }}</td>
+							<td>{{ course.created_at }}</td>
+						</tr>
+					{% endfor %}
 				</table>
 			</div>
 
