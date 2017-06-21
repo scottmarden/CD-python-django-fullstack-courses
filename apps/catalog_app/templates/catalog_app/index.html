@@ -30,6 +30,12 @@
 							<td>{{ course.name }}</td>
 							<td>{{ course.description.description }}</td>
 							<td>{{ course.created_at }}</td>
+							<td>
+								<form action="/delete_course/{{ course.id }}" method="post">
+									{% csrf_token %}
+									<input type="submit" value="remove" />
+								</form>
+							</td>
 						</tr>
 					{% endfor %}
 				</table>
