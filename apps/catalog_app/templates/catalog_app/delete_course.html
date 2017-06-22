@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Confirm Course Delete</title>
+	</head>
+	<body>
+		<h1>Are you sure you want to delete this course from the catalog?</h1>
+		<form action="/cancel_delete">
+			<input type="submit" value="No" />
+		</form>
+		<form action="/confirm_delete/{{ course_id }}">
+			<input type="submit" value="Yes, delete the course" />
+		</form>
+	</body>
+</html>
